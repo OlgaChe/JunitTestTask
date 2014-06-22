@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Created with IntelliJ IDEA.
  * User: chernyak
@@ -6,15 +8,28 @@
  * To change this template use File | Settings | File Templates.
  */
 public class MathOp {
+    static int a;
+    private Scanner scanner;
+
     public MathOp() {
+
+    }
+    
+    public void setScanner(Scanner scanner) {
+    this.scanner = scanner;
     }
 
-    public int fac(int a) {
+    public int fac() {
 
-        int n = a;
-        int result = 1;
+        System.out.println("Input n:");
+        int result = 0;
+        int n = scanner.nextInt();
+        result = 1;
+
         for (int i = 2; i <= n; i++)
-            result *= i;
+                result *= i;
+
         return result;
+
     }
 }
